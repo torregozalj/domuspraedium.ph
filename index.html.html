@@ -1,0 +1,203 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOMUS PRAEDIUM</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1605987190343207');
+fbq('track', 'PageView');
+</script>
+
+<!-- GOOGLE PIXEL -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11442413834"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-11442413834');
+</script>
+
+<style>
+body{margin:0;font-family:Arial;background:#000;color:#fff;}
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover;
+display:flex;align-items:center;justify-content:center;text-align:center;
+}
+
+.overlay{background:rgba(0,0,0,0.7);padding:40px;border-radius:10px;}
+
+.btn{padding:15px 25px;margin:10px;border:none;cursor:pointer;font-weight:bold;}
+.gold{background:gold;color:black;}
+.dark{background:#222;color:white;}
+
+.section{padding:60px 20px;text-align:center;}
+
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+
+.card{background:#111;padding:10px;border-radius:12px;width:260px;}
+.card img{width:100%;height:170px;object-fit:cover;border-radius:10px;}
+
+input,select{padding:10px;margin:10px;width:260px;}
+
+.whatsapp{position:fixed;bottom:20px;right:20px;width:60px;cursor:pointer;}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="overlay">
+<h1>Find the Right Property Investment</h1>
+<p>Property • Strategy • Legacy</p>
+
+<button class="btn gold" onclick="scrollToForm()">Schedule Viewing</button>
+<button class="btn dark" onclick="openWhatsApp()">Speak with an Advisor</button>
+</div>
+</div>
+
+<!-- INTERIOR IMAGES -->
+<div class="section">
+<h2>Prime Locations</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
+<p>Makati CBD</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=80">
+<p>BGC Taguig</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80">
+<p>Ortigas CBD</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=800&q=80">
+<p>Pasig City</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80">
+<p>Bay Area Pasay</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80">
+<p>Quezon City</p>
+</div>
+
+</div>
+</div>
+
+<!-- FORM -->
+<div class="section" id="form">
+<h2>Schedule Your Private Viewing</h2>
+
+<form onsubmit="submitForm(event)">
+<input type="text" id="name" placeholder="Full Name" required><br>
+<input type="text" id="phone" placeholder="Phone Number" required><br>
+
+<select id="type" required>
+<option value="">Property Type</option>
+<option>Condo</option>
+<option>House & Lot</option>
+</select><br>
+
+<select id="status" required>
+<option value="">Project Status</option>
+<option>Pre-selling</option>
+<option>Ready for Occupancy (RFO)</option>
+</select><br>
+
+<select id="location" required>
+<option value="">Preferred Location</option>
+<option>Makati</option>
+<option>BGC</option>
+<option>Ortigas</option>
+<option>Pasig</option>
+<option>Pasay</option>
+<option>Quezon City</option>
+</select><br>
+
+<select id="budget" required>
+<option value="">Budget Range</option>
+<option>Below 3M</option>
+<option>3M - 5M</option>
+<option>5M - 8M</option>
+<option>8M - 12M</option>
+<option>12M - 20M</option>
+<option>20M+</option>
+</select><br>
+
+<button class="btn gold">Submit</button>
+</form>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+class="whatsapp"
+onclick="openWhatsApp()">
+
+<script>
+
+/* 👉 SPEAK WITH ADVISOR = BLANK CHAT */
+function openWhatsApp(){
+window.location.href="https://api.whatsapp.com/send?phone=639690134227";
+}
+
+/* 👉 SCROLL TO FORM */
+function scrollToForm(){
+document.getElementById("form").scrollIntoView({behavior:'smooth'});
+}
+
+/* 👉 ONLY FORM SUBMIT = MAY MESSAGE */
+function submitForm(e){
+e.preventDefault();
+
+fbq('track','Lead');
+gtag('event','conversion', {'send_to':'AW-11442413834'});
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let type=document.getElementById("type").value;
+let status=document.getElementById("status").value;
+let location=document.getElementById("location").value;
+let budget=document.getElementById("budget").value;
+
+let msg = `Hi! I'm interested.
+Name: ${name}
+Phone: ${phone}
+Type: ${type}
+Status: ${status}
+Location: ${location}
+Budget: ${budget}`;
+
+window.location.href="https://api.whatsapp.com/send?phone=639690134227&text="+encodeURIComponent(msg);
+}
+
+</script>
+
+</body>
+</html>
+```
